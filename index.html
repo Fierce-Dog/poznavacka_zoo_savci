@@ -29,7 +29,7 @@
 		}
         input { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px; font-size: 16px; box-sizing: border-box; outline: none; }
         input:focus { border-color: var(--primary); }
-        button { width: 100%; background: var(--primary); color: white; border: none; padding: 12px; border-radius: 10px; margin-top: 10px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        button { width: 100%; background: #4db754; color: white; border: none; padding: 12px; border-radius: 10px; margin-top: 10px; font-size: 16px; font-weight: bold; cursor: pointer; }
         #msg { margin-top: 15px; margin-bottom: 10px; font-weight: bold; font-size: 1.2rem; min-height: 20px; line-height: 1.4; transition: all 0.3s;}
         #info { color: gray; font-size: 0.8rem; margin-top: 10px; }
 		.card { 
@@ -38,9 +38,9 @@
 			gap: 4px; /* Vytvoří stejné mezery mezi prvky */
 		}
 		#msg { 
-			margin: 0; 
-			padding: 0;
-            line-height: 0.5;
+			margin: 5; 
+			padding: 10;
+            line-height: 1;
 			order: 1; /* Zpráva bude úplně nahoře */
 		}
 		#info { 
@@ -49,7 +49,7 @@
 		}
 		#pic { 
 			order: 3; /* Obrázek pod info texty */
-            margin: -5px 0 -5px 0;
+            margin: 5px 0;
 		}
 		#input-area {
 			order: 5; /* Vstupní pole a tlačítko úplně dole */
@@ -58,7 +58,8 @@
             order: 4; /* Tlačítko na video bude hned pod obrázkem */
             display: flex;
             justify-content: center;
-    
+            margin-top: 5px;
+            margin-bottom: 0px;
         }
         .back-link {
             display: block; /* Zajistí, že odkaz zabere celou šířku a umožní zarovnání */
@@ -131,6 +132,7 @@
         { file: "gorila_nizinna.jpg", name: "Gorila nížinná", order: "Primates", link: "https://www.youtube.com/watch?v=VF5S0uGG6tg" },
         { file: "gorila_horska.jpg", name: "Gorila horská", order: "Primates", link: "https://www.youtube.com/watch?v=-BMdEzIO5oE" },
         { file: "simpanz_ucenlivy.jpg", name: "Šimpanz učenlivý", order: "Primates", link: "https://www.youtube.com/watch?v=qF_hDhxDgZ0" },
+        /*
         { file: "zajic_polni.jpg", name: "Zajíc polní", order: "Lagomorpha", link: "https://www.youtube.com/watch?v=2XH0zZgRkw4" },
         { file: "zajic_belak.jpg", name: "Zajíc bělák", order: "Lagomorpha", link: "https://www.youtube.com/watch?v=LQ2SbSUmkTE" },
         { file: "kralik_divoky.jpg", name: "Králík divoký", order: "Lagomorpha", link: "https://www.youtube.com/watch?v=VYvfYFZbtio" },
@@ -143,6 +145,7 @@
         { file: "vrapenec_maly.jpg", name: "Vrápenec malý", order: "Chiroptera", link: "https://www.youtube.com/watch?v=2YVUaprdWFs" },
         { file: "netopyr_dlouhouchy.jpg", name: "Netopýr dlouhouchý", order: "Chiroptera", link: "https://www.youtube.com/watch?v=Abc_Ti_vcf0" },
         { file: "luskoun_dlouhoocasy.jpg", name: "Luskoun dlouhoocasý", order: "Pholidota", link: "https://www.youtube.com/watch?v=0YE_biabn_I" },
+        */
         { file: "vlk_obecny.jpg", name: "Vlk obecný", order: "Carnivora", link: "https://www.youtube.com/watch?v=xgDlDW8m0Gw" },
         { file: "pes_hyenovity.jpg", name: "Pes hyenovitý", order: "Carnivora", link: "https://www.youtube.com/watch?v=A8erptSNqbk" },
         { file: "pes_usaty.jpg", name: "Pes ušatý", order: "Carnivora", link: "https://www.youtube.com/watch?v=6Jphq1qA1GI" },
@@ -183,6 +186,7 @@
         { file: "tygr_ussurijsky.jpg", name: "Tygr ussurijský", order: "Carnivora", link: "https://www.youtube.com/watch?v=OgxT-lewFm8" },
         { file: "tygr_sumatersky.jpg", name: "Tygr sumaterský", order: "Carnivora", link: "https://www.youtube.com/watch?v=Sm-HMA0D040" },
         { file: "lev_pustinny.jpg", name: "Lev pustinný", order: "Carnivora", link: "https://www.youtube.com/watch?v=GZkX7epjMZ8" },
+        /*
         { file: "tapir_cabrakovy.jpg", name: "Tapír čabrakový", order: "Perissodactyla", link: "https://www.youtube.com/watch?v=LyFI1Sy-U4c" },
         { file: "nosorozec_bily.jpg", name: "Nosorožec bílý", order: "Perissodactyla", link: "https://www.youtube.com/watch?v=PoaAz-0NxL0" },
         { file: "nosorozec_cerny.jpg", name: "Nosorožec černý", order: "Perissodactyla", link: "https://www.youtube.com/watch?v=nXNeYGDLQgs" },
@@ -232,17 +236,16 @@
         { file: "mara_stepni.jpg", name: "Mara stepní", order: "Rodentia", link: "https://www.youtube.com/watch?v=knXaKDFze2c" },
         { file: "kapybara_mokradni.jpg", name: "Kapybara mokřadní", order: "Rodentia", link: "https://www.youtube.com/watch?v=RlTgGASnrrA" },
         { file: "nutrie_ricni.jpg", name: "Nutrie říční", order: "Rodentia", link: "https://www.youtube.com/watch?v=z-anlCy3v-k" }
-
-        /*
-        { file: ".jpg", name: "", order: "", link: "" }
-         */
-        
+        */
     ];
 
     let current;
     let attempts = 0; 
     let phase = 1; 
     let pool = [...items]; // Musíme pool naplnit hned na začátku
+    let correctNameTotal = 0;
+    let correctOrderTotal = 0;
+    let shownTotal = 0;
 
     function next() {
         const msgField = document.getElementById("msg");
@@ -254,6 +257,9 @@
         // 1. KONTROLA POOLU (Tohle ti chybělo)
         if (pool.length === 0) {
             pool = [...items]; // Restart kola
+            correctNameTotal = 0; // RESET x
+            correctOrderTotal = 0; // RESET y
+            shownTotal = 0; // RESET z
         }
 
         // 2. VÝBĚR OBRÁZKU
@@ -272,7 +278,7 @@
         // Styl tlačítka
             videoBtn.style.display = "inline-block";
             videoBtn.style.padding = "8px 8px";
-            videoBtn.style.backgroundColor = "#1565c0";
+            videoBtn.style.backgroundColor = "#4db754";
             videoBtn.style.color = "white";
             videoBtn.style.borderRadius = "10px";
             videoBtn.style.textDecoration = "none";
@@ -303,8 +309,8 @@
         inOrder.style.color = "black";
         inOrder.style.fontWeight = "normal";
 
-        msgField.innerText = "Poznej druh";
-        msgField.style.color = "#333";
+        msgField.innerText = "Poznej druh savce";
+        msgField.style.color = "green";
         
         inName.focus();
         updateInfo();
@@ -314,7 +320,8 @@
         // Kontrola, zda prvek info existuje
         const infoField = document.getElementById("info");
         if(infoField) {
-            infoField.innerText = `Zbývá v kole: ${pool.length} | Pokus: ${attempts + 1}/3`;
+            const displayAttempts = Math.min(attempts + 1, 3);
+            infoField.innerText = `Skóre: ${correctNameTotal}/${correctOrderTotal}/${shownTotal}/${items.length} | Zbývá: ${pool.length} | Pokus: ${displayAttempts}/3`;
             infoField.style.color = "#666";
         }
     }
@@ -334,7 +341,8 @@
         } else {
             attempts++;
             if (attempts < 3) {
-                msgField.innerText = "✗ Špatný druh, zkus to znovu!";
+                msgField.innerText = "Špatný druh, zkus to znovu!";
+                msgField.style.color = "orange";
                 inName.value = "";
                 inName.focus();
             } else {
@@ -348,7 +356,8 @@
         } else {
             attempts++;
             if (attempts < 3) {
-                msgField.innerText = "✗ Špatný řád, zkus to znovu!";
+                msgField.innerText = "Špatný řád, zkus to znovu!";
+                msgField.style.color = "orange";
                 inOrder.value = "";
                 inOrder.focus();
             } else {
@@ -367,6 +376,7 @@
         inName.disabled = true;
 
         if (wasCorrect) {
+            correctNameTotal++; // PŘIČTEME BOD ZA DRUH (x)
             inName.style.backgroundColor = "#e8f5e9"; // Zelená
             inName.style.borderColor = "green";
             inName.style.color = "green";
@@ -383,7 +393,8 @@
         inOrder.disabled = false;
         inOrder.style.backgroundColor = "white";
         inOrder.focus();
-        document.getElementById("msg").innerText = wasCorrect ? "Výborně! Teď řád:" : "Pamatuj si druh. Teď řád:";
+        document.getElementById("msg").innerText = wasCorrect ? "Správně! Teď řád:" : "Pamatuj si druh. Teď řád:";
+        updateInfo();
     }
 
     function successPhase2(wasCorrect) {
@@ -394,21 +405,23 @@
         inOrder.disabled = true;
 
         if (wasCorrect) {
+            correctOrderTotal++; // PŘIČTEME BOD ZA ŘÁD (y)
             inOrder.style.backgroundColor = "#e8f5e9";
             inOrder.style.borderColor = "green";
             inOrder.style.color = "green";
             inOrder.style.fontWeight = "bold";
-            msgField.innerText = "✓ Kompletní!";
+            msgField.innerText = "Kompletní!";
             msgField.style.color = "green";
         } else {
             inOrder.style.backgroundColor = "#ffebee";
             inOrder.style.borderColor = "red";
             inOrder.style.color = "red";
             inOrder.style.fontWeight = "bold";
-            msgField.innerText = "Tady máš správné odpovědi...";
+            msgField.innerText = "Správně bylo:";
             msgField.style.color = "red";
         }
         
+        shownTotal++;
         pool = pool.filter(i => i !== current);
 
         // ČASOVÁNÍ: Pokud bylo něco špatně, počkáme 5 sekund (5000ms), jinak 2 sekundy (2000ms)
@@ -418,6 +431,7 @@
         const inName = document.getElementById("guess-name");
         if (inName.style.borderColor === "red") delay = 5000;
 
+        updateInfo();
         setTimeout(next, delay);
     }
 
